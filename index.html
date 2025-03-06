@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Puzzle Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header id="headLine">
+        <h1>Drag and Drop!</h1>
+        <p>Solve the puzzle</p>
+    </header>
+
+    <main>
+        <section id="game-boards">
+            <h2 class="visually-hidden" id="puzzle-heading">Puzzle Game Board</h2>
+            
+            <div class="puzzle-pieces">
+                <img id="topLeft" src="images/topLeft0.jpg" class="puzzle-image" alt="Top left puzzle piece" draggable="true">
+                <img id="topRight" src="images/topRight0.jpg" class="puzzle-image" alt="Top right puzzle piece" draggable="true">
+                <img id="bottomLeft" src="images/bottomLeft0.jpg" class="puzzle-image" alt="Bottom left puzzle piece" draggable="true">
+                <img id="bottomRight" src="images/bottomRight0.jpg" class="puzzle-image" alt="Bottom right puzzle piece" draggable="true">
+            </div>
+
+            <div class="puzzle-board">
+                <div class="drop-zone tl" aria-labelledby="drop-tl"></div>
+                <div class="drop-zone tr" aria-labelledby="drop-tr"></div>
+                <div class="drop-zone bl" aria-labelledby="drop-bl"></div>
+                <div class="drop-zone br" aria-labelledby="drop-br"></div>
+                
+                <p id="drop-tl" class="visually-hidden">Drop zone for top left piece</p>
+                <p id="drop-tr" class="visually-hidden">Drop zone for top right piece</p>
+                <p id="drop-bl" class="visually-hidden">Drop zone for bottom left piece</p>
+                <p id="drop-br" class="visually-hidden">Drop zone for bottom right piece</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Click a thumbnail to change the puzzle pieces!</p>
+        <nav id="buttonHolder">
+            <button class="thumbnail" data-bgref="0">
+                <img src="images/buttonZero.jpg" alt="Puzzle variation 1">
+            </button>
+            <button class="thumbnail" data-bgref="1">
+                <img src="images/buttonOne.jpg" alt="Puzzle variation 2">
+            </button>
+            <button class="thumbnail" data-bgref="2">
+                <img src="images/buttonTwo.jpg" alt="Puzzle variation 3">
+            </button>
+            <button class="thumbnail" data-bgref="3">
+                <img src="images/buttonThree.jpg" alt="Puzzle variation 4">
+            </button>
+        </nav>
+    </footer>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
